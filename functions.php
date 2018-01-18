@@ -1,4 +1,5 @@
 <?php
+
 /**
  * catalyst_wp_theme functions and definitions.
  *
@@ -60,18 +61,14 @@ add_action(
         ));
 
         //auto load scripts
-        //change to get_stylesheet_directory for child theme
         foreach (glob(get_template_directory() . "/config/*.php") as $filename) {
             require_once($filename);
         }
         foreach (glob(get_template_directory() . "/hooks/*.php") as $filename) {
             require_once($filename);
         }
-
-        /**---------------------
-         * CUSTOM INCLUDES BELOW *
-         ------------------------*/
     },
     1
 );
+
 remove_filter('template_redirect', 'redirect_canonical');
