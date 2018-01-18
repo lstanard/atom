@@ -37,8 +37,6 @@ MOLECULES
 /* ----------------------------------------------------------
 ORGANISMS
 ----------------------------------------------------------- */
-@import 'organisms/header';
-@import 'organisms/footer';
 @import 'organisms/accordion';
 @import 'organisms/basic-content-block';
 @import 'organisms/brand-window';

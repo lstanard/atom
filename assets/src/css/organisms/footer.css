@@ -1,9 +1,0 @@
-.organism.footer {
-    border-top: 1px solid $gray;
-    padding: 3rem 0;
-
-    .container {
-        align-items: center;
-        justify-content: space-between;
-    }
-}

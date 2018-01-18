@@ -31,9 +31,15 @@ class Organisms extends \CatalystWP\Nucleus\Model
             $this->data = array();
         }
 
-        //set header & footer data
-        $this->data['header'] = new organisms\Header();
-        $this->data['footer'] = new organisms\Footer();
+        // Apply filter to allow child theme to modify organism data
+        add_filter('catalystwp_organism_data', array($this, 'appendData'), 10, 1);
+
+        $this->data = apply_filters('catalystwp_organism_data', $this->data);
+    }
+
+    public function appendData($data)
+    {
+        return $data;
     }
 
     /**
