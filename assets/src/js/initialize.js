@@ -14,7 +14,7 @@ $(document).ready(() => {
     maps();
 
     // Initialize header mobile menu
-    let headerMenu = new mobileMenu('.organism.header');
+    // let headerMenu = new mobileMenu('.organism.header');
 
     /**
      * Accordion

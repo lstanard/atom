@@ -1,0 +1,21 @@
+<h1>Neighborhood Overview</h1>
+
+{{#if posts}}
+<ul>
+    {{#each posts}}
+    <li>
+        <h2>
+            <a href="{{permalink}}">
+                {{this.post_title}}
+                {{#if this.cityState}} in {{this.cityState}}{{/if}}
+            </a>
+        </h2>
+        <p>{{{this.description}}}</p>
+    </li>
+    {{/each}}
+</ul>
+{{/if}}
+
+{{#if pagination}}
+    {{{pagination}}}
+{{/if}}
